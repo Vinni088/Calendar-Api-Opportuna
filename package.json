@@ -9,7 +9,7 @@
   "scripts": {
     "build": "tsc",
     "dev": "nodemon src/server.ts",
-    "start": "node dist/src/server.js",
+    "start": "node dist/server.js",
     "test": "dotenv -e .env.test jest -- --runInBand",
     "test:cov": "dotenv -e .env.test jest -- --coverage --runInBand "
   },
