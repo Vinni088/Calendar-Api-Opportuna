@@ -70,3 +70,13 @@ export async function deleteReminder(id: number) {
     return deleted
 };
 
+export async function checkId(id: number) {
+
+    let reminder = await prisma.reminders.findUnique({
+        where: {
+            id
+        }
+    })
+
+    return reminder
+};

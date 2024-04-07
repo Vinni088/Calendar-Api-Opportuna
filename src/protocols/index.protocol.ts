@@ -6,8 +6,8 @@ export type ApplicationError = {
 export type ReminderParams = {
     title: string,
     description: string,
-    date: Date,
-    time: Date,
+    date: string,
+    time: string,
     city: string,
     color: string
 }

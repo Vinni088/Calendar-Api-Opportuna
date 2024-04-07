@@ -24,11 +24,11 @@ model users {
 }
 
 model reminders {
-  id          Int      @id @default(autoincrement())
-  date        DateTime @db.Date
-  time        DateTime @db.Time(6)
-  title       String   @db.VarChar(30)
-  description String?
-  city        String?  @db.VarChar(40)
-  color       String?  @db.VarChar(30)
+  id          Int     @id @default(autoincrement())
+  date        String  @db.VarChar(10)
+  time        String  @db.VarChar(5)
+  title       String  @db.VarChar(30)
+  description String? @db.VarChar(30)
+  city        String? @db.VarChar(30)
+  color       String? @db.VarChar(30)
 }
