@@ -13,4 +13,6 @@ remindersRouter.put('/reminder/:id', validateSchema(ReminderSchema), remindersCo
 
 remindersRouter.delete('/reminder/:id', remindersController.deleteReminder);
 
+remindersRouter.delete('/reminder/date/:dateString', remindersController.deleteByDateReminder);
+
 export { remindersRouter };

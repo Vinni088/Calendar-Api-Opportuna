@@ -53,3 +53,13 @@ export async function deleteReminder(req: Request, res: Response) {
 
     return res.status(httpStatus.OK).send(deletedReminder);
 }
+
+export async function deleteByDateReminder(req: Request, res: Response) {
+    const { dateString } = req.params
+
+    await utils.CheckDateFormat(dateString);
+
+    let deletedReminder = await remindersRepository.deleteReminderByDate(dateString);
+
+    return res.status(httpStatus.OK).send(deletedReminder);
+}

@@ -70,6 +70,16 @@ export async function deleteReminder(id: number) {
     return deleted
 };
 
+export async function deleteReminderByDate(date: string) {
+    let deleted = await prisma.reminders.deleteMany({
+        where: {
+            date
+        }
+    })
+
+    return deleted
+};
+
 export async function checkId(id: number) {
 
     let reminder = await prisma.reminders.findUnique({
